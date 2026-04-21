@@ -1,57 +1,38 @@
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+:root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --accent: #2d3436;
+    --border: #e0e0e0;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-}
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: #333; margin: 0; }
+.app-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-}
-
-select {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    outline: none;
-}
-
-.grid {
-    display: grid;
-    gap: 20px;
-}
-
-.card {
-    background: white;
+/* Translator Box */
+.translator-box {
+    background: #fff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
 }
+.lookup-row { display: flex; gap: 10px; margin-bottom: 10px; }
+.result-text { font-style: italic; color: #666; font-size: 0.9rem; }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.controls { display: flex; gap: 10px; }
 
-.term {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #000;
-}
+.btn-export { background: #000; color: #fff; border: none; border-radius: 6px; padding: 0 15px; cursor: pointer; }
 
-.translation {
-    margin-top: 10px;
-    color: #666;
+/* Cards */
+.glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.card { background: #fff; padding: 25px; border-radius: 12px; border: 1px solid var(--border); }
+.term-main { font-size: 1.25rem; font-weight: 600; }
+.term-sub { color: #888; margin: 10px 0; }
+.note-area { 
+    background: #fdfdfd; 
+    border-left: 3px solid #eee; 
+    padding: 8px; 
+    font-size: 0.85rem; 
+    color: #555;
 }
