@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polyglot Glossary</title>
+    <title>Advanced Glossary Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="app-container">
+        <section class="translator-box">
+            <h3>Quick Lookup</h3>
+            <div class="lookup-row">
+                <input type="text" id="translateInput" placeholder="Type to translate...">
+                <button onclick="quickTranslate()">Translate</button>
+            </div>
+            <div id="translateResult" class="result-text">Result will appear here...</div>
+        </section>
+
         <header>
-            <h1>Glossary</h1>
-            <select id="langSelector">
-                <option value="th">ไทย (Thai)</option>
-                <option value="en" selected>English</option>
-                <option value="jp">日本語 (Japanese)</option>
-                <option value="de">Deutsch (German)</option>
-                <option value="es">Español (Spanish)</option>
-            </select>
+            <div class="brand">GLOSSARY HUB</div>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search saved terms...">
+                <button class="btn-export" onclick="exportToCSV()">Export CSV</button>
+                <select id="langSelector">
+                    <option value="th">Thai</option>
+                    <option value="en" selected>English</option>
+                    <option value="jp">Japanese</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
         </header>
 
-        <div id="glossaryList" class="grid">
-            </div>
+        <main id="glossaryGrid" class="glossary-grid"></main>
     </div>
     <script src="script.js"></script>
 </body>
