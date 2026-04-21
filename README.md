@@ -1,0 +1,2 @@
+# myglossary
+glossary for interpretation
