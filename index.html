@@ -1,0 +1,29 @@
+index.html
+This file defines the layout and the language selector.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot Glossary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Glossary</h1>
+            <select id="langSelector">
+                <option value="th">ไทย (Thai)</option>
+                <option value="en" selected>English</option>
+                <option value="jp">日本語 (Japanese)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="es">Español (Spanish)</option>
+            </select>
+        </header>
+
+        <div id="glossaryList" class="grid">
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
